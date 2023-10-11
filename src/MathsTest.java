@@ -1,27 +1,28 @@
 import org.junit.*;
 
-import static org.junit.Assert.assertEquals;
-
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 public class MathsTest {
     Maths maths;
 
     @Before
     public void setUpInstance() {
-        maths = new Maths();
+        this.maths = new Maths();
     }
 
     @Test
-    public void checkTheSumOfTwoNumbersEqualsToThree(){
-        Assert.assertEquals(3, maths.addTwoNumbers(9, 7));
+    public void checkTheSumOfTwoNumbersEqualsThree(){
+        Assert.assertEquals(3L, (long)this.maths.addTwoNumbers(5, -2));
     }
 
     @Test
-    public void checkTheSumOfTwoNumbersEqualsToThreeAgain(){
-        assertEquals(3, maths.addTwoNumbers(1, 2));
+    public void checkTheSumOfTwoNumbersEqualsThreeAgain(){
+        Assert.assertEquals(3L, (long)this.maths.addTwoNumbers(2, 1));
     }
 
     @Test
-    public void checkThePrime(){
-        Assert.assertEquals(true, maths.checkIfNumberIsPrime(7));
-    }
+    public void checkIfNumberIsPrime(){
+        Assert.assertTrue(this.maths.checkPrime(7));}
 }
+
