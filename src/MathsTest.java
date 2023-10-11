@@ -1,5 +1,7 @@
 import org.junit.*;
 
+import static org.junit.Assert.assertEquals;
+
 public class MathsTest {
     Maths maths;
 
@@ -15,11 +17,11 @@ public class MathsTest {
 
     @Test
     public void checkTheSumOfTwoNumbersEqualsToThreeAgain(){
-        Assert.assertEquals(3, maths.addTwoNumbers(1, 2));
+        assertEquals(3, maths.addTwoNumbers(1, 2));
     }
 
     @Test
     public void checkThePrime(){
-        Assert.assertTrue(maths.checkIfNumberIsPrime(7));
+        Assert.assertEquals(true, maths.checkIfNumberIsPrime(7));
     }
 }

@@ -5,8 +5,9 @@ public class Maths {
     public boolean checkIfNumberIsPrime(int Number) {
         boolean flag = false;
         for (int i = 2; i < Number/2; i++){
-            if(Number % i == 0){
+            if ((Number % i) == 0) {
                 flag = false;
+                break;
             }
         }
         return flag;
