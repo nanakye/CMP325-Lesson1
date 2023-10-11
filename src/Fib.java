@@ -1,5 +1,3 @@
-package Test;
-
 public class Fib {
     int first = 0;
     int second = 1;
